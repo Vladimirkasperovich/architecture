@@ -1,0 +1,60 @@
+.catalog {
+    padding: 150px 100px;
+    background-color: #F5F5F5;
+    color: #2B2B2B;;
+}
+
+.catalog__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.catalog__title {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.15;
+    text-transform: uppercase;
+    max-width: 556px;
+    margin-bottom: 60px;
+}
+
+.catalog__cover img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form {
+
+}
+
+.form__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.18;
+    text-transform: uppercase;
+    max-width: 429px;
+    margin-bottom: 20px;
+}
+
+.form__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.18;
+    text-transform: uppercase;
+    max-width: 429px;
+    margin-bottom: 50px;
+}
+
+.form__input {
+    border: 1px solid #171717;
+}
+
+.form__input::placeholder {
+    font-size: 24px;
+    font-weight: 250;
+
+}

@@ -1,94 +1,45 @@
-import s from './Projects.module.css'
 import {Swiper, SwiperSlide} from "swiper/react";
+import {BREAKPOINTS, PROJECTS_LIST} from "../Services/constants.jsx";
+import s from './Projects.module.css'
 import 'swiper/css';
+import ArrowLeft from '../../assets/arrow-left.svg'
+import ArrowRight from '../../assets/arrow-right.svg'
+import {useState} from "react";
+import {SwiperButton} from "../SwiperButton/SwiperButton.jsx";
 
 export const Projects = () => {
+    const [openId, setOpenId] = useState(null)
+    const handleCollapseText = (id) => setOpenId((prev) => prev === id ? null : id)
 
     return (
         <section className={s.projects}>
             <h1 className={s.projects__title}>Our Projects</h1>
-            <Swiper className={s.projects__list} slidesPerView={1} spaceBetween={20} loop breakpoints={{
-                640: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            }}
-            >
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects1.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>Apartment 55.6 m²</h1>
-                        <h2 className={s.projects__item__text}>For a young couple of lawyers</h2>
-                        <h3 className={s.projects__item__description}>The main idea of this interior is to create a
-                            bright,
-                            light, and cozy space. Warm colors and soft lines are used throughout the design to evoke a
-                            sense of calm and harmony.</h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects2.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>The house</h1>
-                        <h2 className={s.projects__item__text}>For a family of doctors</h2>
-                        <h3 className={s.projects__item__description}>A comfortable space for the homeowners is ensured
-                            through proper organization and planning of the house. The open terrace seamlessly connects
-                            the
-                            pool, kitchen, and living areas. </h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects3.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>The house</h1>
-                        <h2 className={s.projects__item__text}>For a family of doctors</h2>
-                        <h3 className={s.projects__item__description}>A comfortable space for the homeowners is ensured
-                            through proper organization and planning of the house. The open terrace seamlessly connects
-                            the
-                            pool, kitchen, and living areas. </h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects1.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>Apartment 55.6 m²</h1>
-                        <h2 className={s.projects__item__text}>For a young couple of lawyers</h2>
-                        <h3 className={s.projects__item__description}>The main idea of this interior is to create a
-                            bright,
-                            light, and cozy space. Warm colors and soft lines are used throughout the design to evoke a
-                            sense of calm and harmony.</h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects2.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>The house</h1>
-                        <h2 className={s.projects__item__text}>For a family of doctors</h2>
-                        <h3 className={s.projects__item__description}>A comfortable space for the homeowners is ensured
-                            through proper organization and planning of the house. The open terrace seamlessly connects
-                            the
-                            pool, kitchen, and living areas. </h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <div className={s.projects__item}>
-                        <img src="/src/assets/projects/projects3.jpg" alt="" className="projects__item__image"/>
-                        <h1 className={s.projects__item__title}>The house</h1>
-                        <h2 className={s.projects__item__text}>For a family of doctors</h2>
-                        <h3 className={s.projects__item__description}>A comfortable space for the homeowners is ensured
-                            through proper organization and planning of the house. The open terrace seamlessly connects
-                            the
-                            pool, kitchen, and living areas. </h3>
-                        <a className={s.projects__item__link} href="#">more</a>
-                    </div>
-                </SwiperSlide>
+            <Swiper className='swiper' slidesPerView={1} spaceBetween={20} loop breakpoints={BREAKPOINTS}>
+                {
+                    PROJECTS_LIST.map((project) => (
+                        <SwiperSlide key={project.id}>
+                            <div className={s.project__item__wrapper}>
+                                <div className={s.projects__item}>
+                                    <img src={project.src} alt="" className={s.projects__item__image}/>
+                                    <h1 className={s.projects__item__title}>{project.title}</h1>
+                                    <h2 className={s.projects__item__text}>{project.text}</h2>
+                                    <p className={`${s.description} ${openId === project.id ? s.expanded : s.collapsed}`}>
+                                        {project.description}
+                                    </p>
+                                    <button className={s.project__item__collapse}
+                                            onClick={() => handleCollapseText(project.id)}>{openId === project.id ? 'Show less' : 'Show more'}</button>
+                                    <a className={s.projects__item__link} href={project.link}>more</a>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
+                <div className={s.button__Wrapper}>
+                    <SwiperButton src={ArrowLeft} direction='prev' />
+                    <SwiperButton src={ArrowRight} direction='next'/>
+                </div>
             </Swiper>
+
         </section>
     );
 };

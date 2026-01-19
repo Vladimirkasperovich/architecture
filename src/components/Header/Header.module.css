@@ -115,6 +115,10 @@
     padding: 20px 50px;
     display: inline-block;
 }
+.header__btn:hover{
+    background: #2B2B2B;
+    color: white;
+}
 
 @media (max-width: 1300px) {
     .header__container {

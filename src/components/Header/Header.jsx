@@ -1,4 +1,7 @@
 import s from './Header.module.css'
+import BurgerMenu from '../../assets/burger-menu.svg'
+import Logo from '../../assets/header-logo.svg'
+import Phone from '../../assets/phone.svg'
 import {useState} from "react";
 
 export const Header = () => {
@@ -11,7 +14,7 @@ export const Header = () => {
             <div className={s.header__info}>
                 <nav className={s.menu}>
                     <button className={s.menu__btn} onClick={toggleActiveClassName}>
-                        <img src="/src/assets/burger-menu.svg" alt="burger menu" className="menu__btn" width={40}
+                        <img src={BurgerMenu} alt="burger menu" className="menu__btn" width={40}
                              height={20}/>
                     </button>
                     <ul className={`${s.menu__list} ${isMenuOpen ? s.active : ''}`}>
@@ -30,10 +33,10 @@ export const Header = () => {
                     </ul>
                 </nav>
                 <a href="#" className={s.logo}>
-                    <img src="/src/assets/header-logo.svg" alt="logo"/>
+                    <img src={Logo} alt="logo"/>
                 </a>
                 <a href="tel:+380682554585" className={s.header__phone}>
-                    <img src="/src/assets/phone.svg" alt="phone"/>
+                    <img src={Phone} alt="phone"/>
                     <span className={s.phone}>+38 (068) 255 45 85</span>
                 </a>
             </div>

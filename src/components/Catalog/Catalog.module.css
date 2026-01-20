@@ -96,6 +96,11 @@
     background-color: #2B2B2B;
 }
 
+.catalog__images {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 @media (max-width: 1130px) {
 }
 

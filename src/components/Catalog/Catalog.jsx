@@ -1,5 +1,13 @@
 import CatalogCover from '../../assets/catalog-cover.jpg'
 import s from './Catalog.module.css'
+import Catalog1 from '../../assets/catalog/catalog1.jpg'
+import Catalog2 from '../../assets/catalog/catalog2.jpg'
+import Catalog3 from '../../assets/catalog/catalog3.jpg'
+import Catalog4 from '../../assets/catalog/catalog4.jpg'
+import Catalog5 from '../../assets/catalog/catalog5.jpg'
+import Catalog6 from '../../assets/catalog/catalog6.jpg'
+import Catalog7 from '../../assets/catalog/catalog7.jpg'
+import Catalog8 from '../../assets/catalog/catalog8.jpg'
 import {useState} from "react";
 
 export const Catalog = () => {
@@ -31,6 +39,16 @@ export const Catalog = () => {
                     </label>
                     <button type='submit' className={s.catalog__formBtn}>Get the catalog</button>
                 </form>
+            </div>
+            <div className={s.catalog__images}>
+                <img src={Catalog1} alt="Catalog img 1"/>
+                <img src={Catalog2} alt="Catalog img 2"/>
+                <img src={Catalog3} alt="Catalog img 3"/>
+                <img src={Catalog4} alt="Catalog img 4"/>
+                <img src={Catalog5} alt="Catalog img 5"/>
+                <img src={Catalog6} alt="Catalog img 6"/>
+                <img src={Catalog7} alt="Catalog img 7"/>
+                <img src={Catalog8} alt="Catalog img 8"/>
             </div>
         </section>
     );

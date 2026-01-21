@@ -1,23 +1,15 @@
 import CatalogCover from '../../assets/catalog-cover.jpg'
-import s from './Catalog.module.css'
-import Catalog1 from '../../assets/catalog/catalog1.jpg'
-import Catalog2 from '../../assets/catalog/catalog2.jpg'
-import Catalog3 from '../../assets/catalog/catalog3.jpg'
-import Catalog4 from '../../assets/catalog/catalog4.jpg'
-import Catalog5 from '../../assets/catalog/catalog5.jpg'
-import Catalog6 from '../../assets/catalog/catalog6.jpg'
-import Catalog7 from '../../assets/catalog/catalog7.jpg'
-import Catalog8 from '../../assets/catalog/catalog8.jpg'
 import {useState} from "react";
+import {CATALOG_IMAGES} from "./constants.js";
+import s from './Catalog.module.css'
 
 export const Catalog = () => {
     const [inputValue, setInputValue] = useState('')
     const [isChecked, setIsChecked] = useState(false)
     const handleChange = (e) => setInputValue(e.target.value)
     const handleCheck = (e) => setIsChecked(e.target.checked)
-    const onSubmit = (e) => {
-        e.preventDefault()
-    }
+    const onSubmit = (e) => e.preventDefault()
+
 
     return (
         <section className={s.catalog}>
@@ -41,14 +33,11 @@ export const Catalog = () => {
                 </form>
             </div>
             <div className={s.catalog__images}>
-                <img src={Catalog1} alt="Catalog img 1"/>
-                <img src={Catalog2} alt="Catalog img 2"/>
-                <img src={Catalog3} alt="Catalog img 3"/>
-                <img src={Catalog4} alt="Catalog img 4"/>
-                <img src={Catalog5} alt="Catalog img 5"/>
-                <img src={Catalog6} alt="Catalog img 6"/>
-                <img src={Catalog7} alt="Catalog img 7"/>
-                <img src={Catalog8} alt="Catalog img 8"/>
+                {
+                    CATALOG_IMAGES.map(({id, src, alt}) => (
+                        <img key={id} src={src} alt={alt}/>
+                    ))
+                }
             </div>
         </section>
     );

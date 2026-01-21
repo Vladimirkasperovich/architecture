@@ -1,7 +1,6 @@
 
 .header__container {
     min-height: 100vh;
-    background-image: url("/src/assets/Background.jpg");
     background-image: image-set(
             url("/src/assets/Background.avif") type("image/avif"),
             url("/src/assets/Background.jpg") type("image/jpeg")

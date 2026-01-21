@@ -1,7 +1,7 @@
 .catalog {
-    padding: 150px 100px;
+    padding: 150px 100px 0 100px;
     background-color: #F5F5F5;
-    color: #2B2B2B;;
+    color: #2B2B2B;
 }
 
 .catalog__block {

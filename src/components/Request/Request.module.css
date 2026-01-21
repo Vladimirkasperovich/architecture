@@ -1,0 +1,42 @@
+.request {
+    padding: 150px 100px;
+    background-color: #F5F5F5;
+}
+
+.request__container {
+    background-image: image-set(
+            url("/src/assets/request-cover.jpg") type("image/jpeg"),
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 183px 240px;
+}
+
+.request__form {
+    background: #171717;
+    opacity: 0.85;
+    padding: 50px 118px;
+}
+
+.request__title {
+    max-width: 600px;
+    /*font-size: 42px;*/
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.16;
+    margin-bottom: 55px;
+    border: 1px solid red;
+}
+
+.request__form__container {
+
+}
+
+.request__form__input {
+
+}
+
+.request__form__btn {
+
+}

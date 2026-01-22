@@ -10,33 +10,148 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 183px 240px;
+    padding: 183px;
 }
 
 .request__form {
-    background: #171717;
-    opacity: 0.85;
+    background-color: rgba(23, 23, 23, 0.85);
     padding: 50px 118px;
 }
 
 .request__title {
-    max-width: 600px;
-    /*font-size: 42px;*/
+    max-width: 788px;
     font-weight: 300;
+    font-size: 42px;
     text-transform: uppercase;
     line-height: 1.16;
     margin-bottom: 55px;
-    border: 1px solid red;
 }
 
 .request__form__container {
-
+    display: flex;
 }
 
 .request__form__input {
+    background-color: #FFFFFF;
+    width: 60%;
+    height: 60px;
+    padding: 20px;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: 250;
+    line-height: 1.4;
+    color: #2B2B2B;
+}
 
+.request__form__input::placeholder {
+    font-size: 18px;
+    font-weight: 250;
+    line-height: 1.4;
+    color: #2B2B2B;
+}
+
+.request__form__input:hover::placeholder {
+    background-color: #2B2B2B;
+    color: #F5F5F5;
+}
+
+.request__form__input:hover {
+    background-color: #2B2B2B;
+    color: #F5F5F5;
 }
 
 .request__form__btn {
+    background-color: #F5F5F5;
+    text-transform: uppercase;
+    color: #2B2B2B;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 40%;
+}
 
+.request__form__btn:hover {
+    background-color: #2B2B2B;
+    color: #F5F5F5;
+}
+
+@media (max-width: 1460px) {
+    .request__title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .request__container {
+        padding: 105px;
+    }
+
+    .request__form {
+        padding: 50px 100px;
+    }
+
+    .request__title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .request__container {
+        padding: 105px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .request__form {
+        padding: 40px;
+    }
+
+    .request__title {
+        margin-bottom: 30px;
+    }
+
+    .request__form__input {
+        height: 50px;
+    }
+
+    .request__form__btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .request__container {
+        padding: 40px;
+        background-image: none;
+    }
+
+    .request__form {
+        padding: 30px;
+    }
+
+    .request__title {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 480px) {
+    .request {
+        padding: 0 10px 50px 10px;
+    }
+
+    .request__container {
+        padding: 0;
+    }
+
+    .request__title {
+        font-size: 19px;
+    }
+
+    .request__form__input {
+        height: 30px;
+    }
+
+    .request__form__btn {
+        font-size: 10px;
+    }
 }

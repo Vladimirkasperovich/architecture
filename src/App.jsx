@@ -5,6 +5,7 @@ import {Projects} from "./components/Projects/Projects.jsx";
 import {Advantages} from "./components/Advantages/Advantages.jsx";
 import {Catalog} from "./components/Catalog/Catalog.jsx";
 import {Request} from "./components/Request/Request.jsx";
+import {Footer} from "./components/Footer/Footer.jsx";
 
 function App() {
 
@@ -17,16 +18,7 @@ function App() {
             <Advantages/>
             <Catalog/>
             <Request/>
-            <footer>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam dolore ex incidunt
-                    iusto laudantium possimus sequi velit, voluptatibus? Cum delectus maiores molestias necessitatibus
-                    nihil quae quos, suscipit temporibus voluptatibus.
-                </div>
-                <div>Animi aperiam consequuntur inventore iure optio. Minima ratione rerum veritatis! Accusamus autem
-                    debitis dolores ea enim laborum sapiente sequi vero vitae? Assumenda ea ex illum laudantium nemo
-                    perspiciatis possimus, totam!
-                </div>
-            </footer>
+            <Footer/>
         </main>
     )
 }

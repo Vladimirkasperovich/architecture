@@ -54,52 +54,52 @@ export const Footer = () => {
                     <li className={s.footer__media__item}>
                         <a href="#" className={s.footer__media__link}>
                             <img src={Email} alt="Email"/>
-                            formastudio@gmail.com
+                            <span className={s.footer__meta__text}> formastudio@gmail.com</span>
                         </a>
                     </li>
                     <li className={s.footer__media__item}>
                         <a href="#" className={s.footer__media__link}>
                             <img src={Instagram} alt="Instagram"/>
-                            formastudio
+                            <span className={s.footer__meta__text}>formastudio</span>
                         </a>
                     </li>
                     <li className={s.footer__media__item}>
                         <a href="#" className={s.footer__media__link}>
                             <img src={Facebook} alt="Facebook"/>
-                            forma.studio
+                            <span className={s.footer__meta__text}>forma.studio</span>
                         </a>
                     </li>
                     <li className={s.footer__media__item}>
                         <a href="#" className={s.footer__media__link}>
                             <img src={Telega} alt="Telega"/>
-                            @forma.studio
+                            <span className={s.footer__meta__text}>@forma.studio</span>
                         </a>
                     </li>
                     <li className={s.footer__media__item}>
                         <a href="#" className={s.footer__media__link}>
                             <img src={Pinterest} alt="Pinterest"/>
-                            forma.studio
+                            <span className={s.footer__meta__text}>forma.studio</span>
                         </a>
                     </li>
                 </ul>
                 <ul className={s.footer__meta__list}>
                     <li className={s.footer__meta__item}>
                         <a href="#" className={s.footer__meta__link}>
-                            <img src={Map} alt="Map"/>
-                            Kyiv, 14
-                            Teatralna Street
+                            <img src={Map} alt="Map" className={s.map__image}/>
+                            <span className={s.footer__meta__text}>Kyiv, 14 <br/>
+                            Teatralna Street</span>
                         </a>
                     </li>
                     <li className={s.footer__meta__item}>
-                        <a href="#" className={s.footer__meta__link}>
+                        <a href="tel:+380682554585 " className={s.footer__meta__link}>
                             <img src={Phone} alt="Phone"/>
-                            +38 (068) 255 45 85
+                           <span className={s.footer__meta__text}> +38 (068) 255 45 85</span>
                         </a>
                     </li>
                     <li className={s.footer__meta__item}>
                         <p className={s.footer__meta__text}>
-                            Working hours:
-                            Mon–Fri
+                            Working hours: <br/>
+                            Mon–Fri <br/>
                             from 9:00 до 17:00
                         </p>
                     </li>
